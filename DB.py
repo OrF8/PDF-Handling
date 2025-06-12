@@ -2,16 +2,24 @@
 from pypdf import PdfReader, PdfWriter
 from datetime import datetime
 
+CREATION_DATE: str = "D:20250613000000+03'00'"
+
 # Load the original PDF
 reader = PdfReader("C:\\Users\\orfor\\OneDrive\\Desktop\\Or's\\Learning\\The Hebrew University of Jerusalem\\"
                    "Second Year\\Semester B\\Courses\\67506 Databases\\Summaries\\To_W10.pdf")
 writer = PdfWriter()
+
+now = datetime.now().astimezone()
+offset = now.strftime("%z")
+pdf_offset = f"{offset[:3]}'{offset[3:]}'"
+mod_date = now.strftime(f"D:%Y%m%d%H%M%S{pdf_offset}")
+
 writer.add_metadata({
     "/Author": "Noam Kimhi, OF8, DB Course Staff HUJI 2025B",
     "/Creator": "OF8",
     "/Title": "Databases HUJI Course Summary 2025B, Edited by OF8",
-    "/ModDate": datetime.now().strftime("D:%Y%m%d%H%M%S"),
-    "/CreationDate": "D:20250613000000"
+    "/ModDate": mod_date,
+    "/CreationDate": CREATION_DATE
 })
 
 # Copy pages to the writer
