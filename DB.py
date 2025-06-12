@@ -9,7 +9,7 @@ writer = PdfWriter()
 writer.add_metadata({
     "/Author": "Noam Kimhi, OF8, DB Course Staff HUJI 2025B",
     "/Creator": "OF8",
-    "/Title": "Databases HUJI Course Summary 2025B",
+    "/Title": "Databases HUJI Course Summary 2025B, Edited by OF8",
     "/ModDate": datetime.now().strftime("%d.%m.%Y - %H:%M:%S"),
     "/CreationDate": "13.06.2025"
 })
