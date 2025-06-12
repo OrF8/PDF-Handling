@@ -1,10 +1,18 @@
 
 from pypdf import PdfReader, PdfWriter
+from datetime import datetime
 
 # Load the original PDF
 reader = PdfReader("C:\\Users\\orfor\\OneDrive\\Desktop\\Or's\\Learning\\The Hebrew University of Jerusalem\\"
                    "Second Year\\Semester B\\Courses\\67506 Databases\\Summaries\\To_W10.pdf")
 writer = PdfWriter()
+writer.add_metadata({
+    "/Author": "Noam Kimhi, OF8, DB Course Staff HUJI 2025B",
+    "/Creator": "OF8",
+    "/Title": "Databases HUJI Course Summary 2025B",
+    "/ModDate": datetime.now().strftime("%d.%m.%Y - %H:%M:%S"),
+    "/CreationDate": "13.06.2025"
+})
 
 # Copy pages to the writer
 for page in reader.pages:
