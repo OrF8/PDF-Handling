@@ -18,7 +18,7 @@ No general-purpose functionality or user support is provided.
 
 ## Credits
 
-Original course summaries and materials were created by Me and/or [Noam Kimhi](https://github.com/noam-kimhi) and/or the Hebrew University of Jerusalem (HUJI) course staff. \
+The course content used to generate the PDF summaries is © Or Forshmit and/or [Noam Kimhi](https://github.com/noam-kimhi) and/or HUJI staff. \
 This repository only formats and structures those materials into organized PDF files for personal study purposes.
 
 ## Disclaimer
