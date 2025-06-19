@@ -25,3 +25,4 @@ This repository only formats and structures those materials into organized PDF f
 
 As this is a personal project, expect minimal documentation and no guarantees of stability or compatibility. \
 Contributions are not expected or needed.
+See [CONTRIBUTING.md](https://github.com/OrF8/PDF-Handling/blob/master/CONTRIBUTING.md) for detail.
